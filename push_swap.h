@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:40 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/11 11:47:22 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/11 11:51:30 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ t_list				*lst_pop_front(t_list **lst);
 void				push(t_list **stack_pop, t_list **stack_push);
 void				rotate(t_list **stack);
 void				reverse_rotate(t_list **stack);
+void				swap(t_list *stack);
 
 #endif
