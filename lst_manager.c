@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 09:10:07 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/11 10:15:31 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/11 10:19:45 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,16 @@ t_list	*lst_pop_back(t_list **lst)
 		iter = iter->next;
 	l = iter->next;
 	iter->next = NULL;
+	return (l);
+}
+
+t_list	*lst_pop_front(t_list **lst)
+{
+	t_list	*l;
+
+	if (*lst == NULL)
+		return (NULL);
+	l = *lst;
+	*lst = (*lst)->next;
 	return (l);
 }
