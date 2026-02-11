@@ -6,21 +6,23 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:40 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/10 09:11:26 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/11 09:41:23 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-#include <stdlib.h>
-#include <unistd.h>
-#include <stdio.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <unistd.h>
 
-typedef struct s_stack
+typedef struct s_list
 {
-	int	value;
-	struct s_stack *next;
-}	t_stack;
+	int				value;
+	struct s_list	*next;
+}					t_list;
+
+void				lst_addback(t_list **lst, int value);
 
 #endif

@@ -1,25 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   lst_manager.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/08 15:08:27 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/11 09:41:46 by trakotos         ###   ########.fr       */
+/*   Created: 2026/02/11 09:10:07 by trakotos          #+#    #+#             */
+/*   Updated: 2026/02/11 09:42:33 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(void)
+static t_list	*lst_new(int value)
 {
-	t_list	*l;
+	t_list	*lst;
 
-	l = NULL;
-	for (int i = 0; i < 5; i++)
-		lst_addback(&l, i + 1);
-	for (; l != NULL; l = l->next)
-		printf("%d\n", l->value);
-	return (0);
+	lst = (t_list *)malloc(sizeof(t_list));
+	if (lst == NULL)
+		return (NULL);
+	lst->value = value;
+	lst->next = NULL;
+	return (lst);
+}
+
+void	lst_addback(t_list **lst, int value)
+{
+	t_list	*tmp;
+
+	if (*lst == NULL)
+	{
+		*lst = lst_new(value);
+		return ;
+	}
+	if (*lst == NULL)
+		return ;
+	tmp = *lst;
+	while (tmp->next != NULL)
+		tmp = tmp->next;
+	tmp->next = lst_new(value);
 }
