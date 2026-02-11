@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:27 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/11 11:40:09 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/11 11:48:18 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int	main(void)
 	print(a);
 	print(b);
 	printf("rotate\n");
+	rotate(&a);
 	rotate(&a);
 	rotate(&b);
 	print(a);
