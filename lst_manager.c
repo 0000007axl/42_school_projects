@@ -6,13 +6,13 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 09:10:07 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/11 09:57:49 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/11 10:08:05 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	lst_addback(t_list **lst, int value)
+void	lst_push_back(t_list **lst, int value)
 {
 	t_list	*tmp;
 
@@ -29,7 +29,7 @@ void	lst_addback(t_list **lst, int value)
 	tmp->next = lst_new(value);
 }
 
-t_list	*lst_popback(t_list **lst)
+t_list	*lst_pop_back(t_list **lst)
 {
 	t_list	*l;
 	t_list	*iter;
