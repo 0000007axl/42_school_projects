@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:40 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/11 13:43:25 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/11 14:29:49 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdio.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 typedef struct s_list
 {
@@ -34,6 +35,7 @@ void				reverse_rotate(t_list **stack);
 void				swap(t_list *stack);
 long				ft_atol(const char *nptr);
 int					is_integer(char *str);
-void				put_str(char *str);
+void				put_str(char *str, int fd);
+int					get_element(t_list **stack, int ac, char **av);
 
 #endif

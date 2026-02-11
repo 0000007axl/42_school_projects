@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 13:32:50 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/11 13:43:13 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/11 14:29:20 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,14 +53,33 @@ int	is_integer(char *str)
 	return (1);
 }
 
-void	put_str(char *str)
+void	put_str(char *str, int fd)
 {
 	size_t	i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		write(1, &str[i], 1);
+		write(fd, &str[i], 1);
 		i++;
 	}
+}
+
+int	get_element(t_list **stack, int ac, char **av)
+{
+	int	i;
+
+	i = 1;
+	while (i < ac)
+	{
+		if (is_integer(av[i]))
+			lst_push_back(stack, lst_new(ft_atol(av[i])));
+		else
+		{
+			lst_clear(stack);
+			return (0);
+		}
+		i++;
+	}
+	return (1);
 }

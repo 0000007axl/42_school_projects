@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:27 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/11 13:31:54 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/11 16:31:02 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,16 @@ int	main(int ac, char **av)
 	b = NULL;
 	if (ac < 2)
 		return (0);
+	if (!get_element(&a, ac, av))
+	{
+		put_str("Error\n", 2);
+		return (1);
+	}
+	printf("a : ");
+	print(a);
+	printf("b : ");
+	print(b);
+	lst_clear(&a);
+	lst_clear(&b);
 	return (0);
 }
