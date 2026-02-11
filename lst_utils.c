@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 09:44:53 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/11 09:47:22 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/11 09:59:52 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ t_list	*lst_new(int value)
 	return (lst);
 }
 
-void	ft_lstclear(t_list **lst)
+void	lst_clear(t_list **lst)
 {
 	t_list	*tmp;
 

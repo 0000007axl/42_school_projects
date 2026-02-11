@@ -6,7 +6,7 @@
 #    By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/08 15:03:48 by trakotos          #+#    #+#              #
-#    Updated: 2026/02/11 09:46:06 by trakotos         ###   ########.fr        #
+#    Updated: 2026/02/11 09:51:45 by trakotos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,4 +25,4 @@ all: $(NAME)
 $(NAME): $(HEADERS)
 	$(CC) $(CFLAGS) $(SOURCES) -o $(NAME)
 
-.PHONY: $(NAME) aall
+.PHONY: $(NAME) all

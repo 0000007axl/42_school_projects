@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:40 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/11 09:47:46 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/11 09:59:58 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ typedef struct s_list
 }					t_list;
 
 t_list				*lst_new(int value);
+void				lst_clear(t_list **lst);
 void				lst_addback(t_list **lst, int value);
-void				ft_lstclear(t_list **lst);
+t_list				*lst_popback(t_list **lst);
 
 #endif
