@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 09:10:07 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/11 10:19:45 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/11 11:42:16 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,6 @@ t_list	*lst_pop_front(t_list **lst)
 		return (NULL);
 	l = *lst;
 	*lst = (*lst)->next;
+	l->next = NULL;
 	return (l);
 }
