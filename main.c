@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:27 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/11 09:41:46 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/11 09:49:11 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ int	main(void)
 	l = NULL;
 	for (int i = 0; i < 5; i++)
 		lst_addback(&l, i + 1);
-	for (; l != NULL; l = l->next)
-		printf("%d\n", l->value);
+	for (t_list *tmp = l; tmp != NULL; tmp = tmp->next)
+		printf("%d\n", tmp->value);
+	ft_lstclear(&l);
 	return (0);
 }
