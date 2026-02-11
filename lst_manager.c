@@ -6,27 +6,25 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 09:10:07 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/11 10:08:05 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/11 10:10:19 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	lst_push_back(t_list **lst, int value)
+void	lst_push_back(t_list **lst, t_list *new)
 {
 	t_list	*tmp;
 
 	if (*lst == NULL)
 	{
-		*lst = lst_new(value);
+		*lst = new;
 		return ;
 	}
-	if (*lst == NULL)
-		return ;
 	tmp = *lst;
 	while (tmp->next != NULL)
 		tmp = tmp->next;
-	tmp->next = lst_new(value);
+	tmp->next = new;
 }
 
 t_list	*lst_pop_back(t_list **lst)
