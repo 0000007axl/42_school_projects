@@ -6,7 +6,7 @@
 #    By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/08 15:03:48 by trakotos          #+#    #+#              #
-#    Updated: 2026/02/11 10:27:30 by trakotos         ###   ########.fr        #
+#    Updated: 2026/02/11 13:33:06 by trakotos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,9 @@ SOURCES = \
 		push_swap.c \
 		lst_manager.c \
 		lst_utils.c \
-		utils_operation.c
+		utils_operation.c \
+		input_checker.c \
+		utils.c
 HEADERS = push_swap.h
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
