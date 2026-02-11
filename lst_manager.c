@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 09:10:07 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/11 10:10:19 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/11 10:15:31 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,14 @@ void	lst_push_back(t_list **lst, t_list *new)
 	while (tmp->next != NULL)
 		tmp = tmp->next;
 	tmp->next = new;
+}
+
+void	lst_push_front(t_list **lst, t_list *new)
+{
+	if (new == NULL)
+		return ;
+	new->next = *lst;
+	*lst = new;
 }
 
 t_list	*lst_pop_back(t_list **lst)

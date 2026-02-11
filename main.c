@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:27 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/11 10:11:07 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/11 10:15:18 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main(void)
 
 	l = NULL;
 	for (int i = 0; i < 5; i++)
-		lst_push_back(&l, lst_new(i + 1));
+		lst_push_front(&l, lst_new(i + 1));
 	for (t_list *tmp = l; tmp != NULL; tmp = tmp->next)
 		printf("%d\n", tmp->value);
 	last = lst_pop_back(&l);
