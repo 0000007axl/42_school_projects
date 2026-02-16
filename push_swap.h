@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
+/*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:40 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/11 14:29:49 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/16 17:05:17 by seramaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,16 @@ void				push(t_list **stack_pop, t_list **stack_push);
 void				rotate(t_list **stack);
 void				reverse_rotate(t_list **stack);
 void				swap(t_list *stack);
-long				ft_atol(const char *nptr);
-int					is_integer(char *str);
-void				put_str(char *str, int fd);
-int					get_element(t_list **stack, int ac, char **av);
+void				pa(t_list **a, t_list **b);
+void				pb(t_list **a, t_list **b);
+void				sa(t_list *a);
+void				sb(t_list *b);
+void				ss(t_list *a, t_list *b);
+void				ra(t_list **a);
+void				rb(t_list **b);
+void				rr(t_list **a, t_list **b);
+void				rra(t_list **a);
+void				rrb(t_list **b);
+void				rrr(t_list **a, t_list **b);
 
 #endif

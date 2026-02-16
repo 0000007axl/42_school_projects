@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+         #
+#    By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/08 15:03:48 by trakotos          #+#    #+#              #
-#    Updated: 2026/02/11 14:17:05 by trakotos         ###   ########.fr        #
+#    Updated: 2026/02/16 17:23:15 by seramaro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,11 @@ SOURCES = \
 		push_swap.c \
 		lst_manager.c \
 		lst_utils.c \
-		utils_operation.c \
-		utils.c
+		rotate_func.c\
+		r_rotate_func.c\
+		push_func.c\
+		swap_func.c
+
 HEADERS = push_swap.h
 CC = cc
 CFLAGS = -Wall -Wextra -Werror

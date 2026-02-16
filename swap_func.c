@@ -1,40 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_operation.c                                  :+:      :+:    :+:   */
+/*   swap_func.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
+/*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/11 10:26:36 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/11 11:53:34 by trakotos         ###   ########.fr       */
+/*   Created: 2026/02/16 16:50:01 by seramaro          #+#    #+#             */
+/*   Updated: 2026/02/16 16:53:31 by seramaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	push(t_list **stack_pop, t_list **stack_push)
-{
-	t_list	*tmp;
-
-	tmp = lst_pop_front(stack_pop);
-	lst_push_front(stack_push, tmp);
-}
-
-void	rotate(t_list **stack)
-{
-	t_list	*tmp;
-
-	tmp = lst_pop_front(stack);
-	lst_push_back(stack, tmp);
-}
-
-void	reverse_rotate(t_list **stack)
-{
-	t_list	*tmp;
-
-	tmp = lst_pop_back(stack);
-	lst_push_front(stack, tmp);
-}
 
 void	swap(t_list *stack)
 {
@@ -45,4 +21,22 @@ void	swap(t_list *stack)
 	tmp = stack->value;
 	stack->value = stack->next->value;
 	stack->next->value = tmp;
+}
+void	sa(t_list *a)
+{
+	swap(a);
+	write(1, "sa\n", 3);
+}
+
+void	sb(t_list *b)
+{
+	swap(b);
+	write(1, "sb\n", 3);
+}
+
+void	ss(t_list *a, t_list *b)
+{
+	swap(a);
+	swap(b);
+	write(1, "ss\n", 3);
 }
