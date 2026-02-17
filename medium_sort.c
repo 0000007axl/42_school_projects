@@ -6,7 +6,7 @@
 /*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 22:21:16 by seramaro          #+#    #+#             */
-/*   Updated: 2026/02/17 23:33:38 by seramaro         ###   ########.fr       */
+/*   Updated: 2026/02/18 00:27:27 by seramaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ void	medium_sort(t_list **a, t_list **b)
 	block_size = ft_sqrt(lst_size(*a));
 	block_num = block_size;
 	init_size = lst_size(*a);
-	while (block_num <= init_size)
+	while (*a != NULL)
 	{
 		i = 0;
 		size_a = lst_size(*a);
@@ -79,4 +79,5 @@ void	medium_sort(t_list **a, t_list **b)
 	}
 	while (*b != NULL)
 		push_max_index_to_a(a, b);
+	printf("block_size = %d\n", block_size);
 }
