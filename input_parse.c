@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   input_parse.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
+/*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 17:36:54 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/17 17:51:03 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/17 18:46:21 by seramaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ int	parse(int ac, char **av, t_list **a)
 		if (is_integer(av[i]))
 		{
 			n = ft_atoi(av[i]);
-			if ((n > INT_MAX || n < INT_MIN) || is_duplicate(a, (int)n))
+			if ((n > INT_MAX || n < INT_MIN) || is_duplicate(*a, (int)n))
 			{
 				lst_clear(a);
 				return (0);

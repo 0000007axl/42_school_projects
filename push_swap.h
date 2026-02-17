@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
+/*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:40 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/17 17:43:18 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/17 18:41:36 by seramaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ void				rrb(t_list **b);
 void				rrr(t_list **a, t_list **b);
 int					lst_size(t_list *lst);
 void				simple_sort(t_list **a, t_list **b);
+void				medium_sort(t_list **a, t_list **b);
 void				index_lst(t_list *a);
 int					ft_sqrt(int num);
 

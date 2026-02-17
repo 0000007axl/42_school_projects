@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+         #
+#    By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/08 15:03:48 by trakotos          #+#    #+#              #
-#    Updated: 2026/02/17 17:36:59 by trakotos         ###   ########.fr        #
+#    Updated: 2026/02/17 18:42:27 by seramaro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,8 @@ SOURCES = \
 		swap_func.c\
 		simple_sort.c\
 		utils.c\
-		intput_parse.c
+		input_parse.c\
+		medium_sort.c
 
 HEADERS = push_swap.h
 CC = cc

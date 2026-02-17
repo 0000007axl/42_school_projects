@@ -6,7 +6,7 @@
 /*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 15:56:55 by seramaro          #+#    #+#             */
-/*   Updated: 2026/02/17 17:27:59 by seramaro         ###   ########.fr       */
+/*   Updated: 2026/02/17 18:20:27 by seramaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ int	ft_sqrt(int num)
 {
 	int	sq;
 
-	if (num == 1 || num == 2)
+	if (num < 3)
 		return (1);
 	sq = 2;
 	while (sq < num)

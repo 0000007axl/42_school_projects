@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
+/*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:27 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/17 17:48:05 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/17 18:46:02 by seramaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,10 @@ int	main(int ac, char **av)
 		write(2, "Error\n", 6);
 		return (1);
 	}
-	//	print (a);
-	//	print (b);
-	printf("%d\n", ft_sqrt(lst_size(a)));
-	// print (a);
-	// print (b);
+	print(a);
+	print(b);
+	medium_sort(&a, &b);
+	print(a);
+	print(b);
 	return (0);
 }
