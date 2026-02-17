@@ -6,17 +6,17 @@
 /*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 18:15:20 by seramaro          #+#    #+#             */
-/*   Updated: 2026/02/17 18:59:07 by seramaro         ###   ########.fr       */
+/*   Updated: 2026/02/17 22:15:54 by seramaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	get_max(t_list *lst)
+static int	get_max_index(t_list *lst)
 {
 	int	max_index;
 
-	max_index = INT_MIN;
+	max_index = 0;
 	while (lst)
 	{
 		if (lst->index > max_index)
@@ -34,7 +34,7 @@ static void	push_max_index_to_a(t_list **a, t_list **b)
 
 	b_size = lst_size(*b);
 	max_index = 0;
-	max = get_max(*b);
+	max = get_max_index(*b);
 	iter = *b;
 	while (iter->index != max)
 	{
