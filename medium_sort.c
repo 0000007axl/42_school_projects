@@ -6,13 +6,13 @@
 /*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 22:21:16 by seramaro          #+#    #+#             */
-/*   Updated: 2026/02/17 22:21:21 by seramaro         ###   ########.fr       */
+/*   Updated: 2026/02/17 23:33:38 by seramaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	get_max_index(t_list *lst)
+int	get_max_index(t_list *lst)
 {
 	int	max_index;
 

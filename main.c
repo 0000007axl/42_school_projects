@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
+/*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:27 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/17 22:03:52 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/17 23:48:10 by seramaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	main(int ac, char **av)
 	printf("%.2f%%\n", compute_disorder(a) * 100);
 	print(a);
 	print(b);
-	medium_sort(&a, &b);
+	complex_sort(&a, &b);
 	print(a);
 	print(b);
 	return (0);
