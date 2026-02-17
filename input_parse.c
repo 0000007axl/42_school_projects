@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 17:36:54 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/17 17:45:05 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/17 17:51:03 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ int	parse(int ac, char **av, t_list **a)
 				lst_clear(a);
 				return (0);
 			}
-			lst_push_back(a, lst_new(ft_atoi(av[i])));
+			lst_push_back(a, lst_new((int)n));
 		}
 		else
 		{
