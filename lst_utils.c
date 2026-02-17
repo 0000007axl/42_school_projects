@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   lst_utils.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
+/*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 09:44:53 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/11 09:59:52 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/17 15:27:02 by seramaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,18 @@ void	lst_clear(t_list **lst)
 		free(tmp);
 	}
 	*lst = NULL;
+}
+int	lst_size(t_list *lst)
+{
+	size_t	count;
+	t_list	*i;
+
+	count = 0;
+	i = lst;
+	while (i)
+	{
+		i = i->next;
+		count++;
+	}
+	return (count);
 }

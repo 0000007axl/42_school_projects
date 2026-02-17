@@ -6,7 +6,7 @@
 /*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:27 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/16 17:23:50 by seramaro         ###   ########.fr       */
+/*   Updated: 2026/02/17 15:43:05 by seramaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ int		parse (int ac, char **av, t_list **a)
 	return (1);
 }
 
+
 int	main(int ac, char **av)
 {
 	t_list	*a;
@@ -70,6 +71,9 @@ int	main(int ac, char **av)
 	if (ac < 2)
 		return (0);
 	parse(ac, av, &a);
+	print (a);
+	print (b);
+	simple_sort(&a, &b);
 	print (a);
 	print (b);
 	return (0);
