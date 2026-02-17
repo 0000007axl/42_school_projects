@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   lst_utils.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
+/*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 09:44:53 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/17 15:27:02 by seramaro         ###   ########.fr       */
+/*   Updated: 2026/02/17 22:04:59 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ void	lst_clear(t_list **lst)
 	}
 	*lst = NULL;
 }
+
 int	lst_size(t_list *lst)
 {
 	size_t	count;

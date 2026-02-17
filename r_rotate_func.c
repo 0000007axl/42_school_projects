@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   r_rotate_func.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
+/*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 17:00:23 by seramaro          #+#    #+#             */
-/*   Updated: 2026/02/16 17:03:11 by seramaro         ###   ########.fr       */
+/*   Updated: 2026/02/17 22:05:39 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	rrb(t_list **b)
 	reverse_rotate(b);
 	write(1, "rrb\n", 4);
 }
+
 void	rrr(t_list **a, t_list **b)
 {
 	reverse_rotate(a);

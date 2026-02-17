@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
+/*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 15:56:55 by seramaro          #+#    #+#             */
-/*   Updated: 2026/02/17 18:20:27 by seramaro         ###   ########.fr       */
+/*   Updated: 2026/02/17 22:05:59 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,7 @@ void	index_lst(t_list *a)
 	}
 	free(arr);
 }
+
 int	ft_sqrt(int num)
 {
 	int	sq;
@@ -95,4 +96,32 @@ int	ft_sqrt(int num)
 		sq++;
 	}
 	return (1);
+}
+
+float	compute_disorder(t_list *l)
+{
+	int	i;
+	int	total_pairs;
+	int	mistakes;
+	int	j;
+	int	*tab;
+
+	mistakes = 0;
+	total_pairs = 0;
+	i = 0;
+	tab = lst_to_arr(l, lst_size(l));
+	while (i < lst_size(l))
+	{
+		j = i + 1;
+		while (j < lst_size(l))
+		{
+			total_pairs++;
+			if (tab[i] > tab[j])
+				mistakes++;
+			j++;
+		}
+		i++;
+	}
+	free(tab);
+	return (((float)mistakes / (float)total_pairs));
 }
