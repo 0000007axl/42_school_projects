@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
+/*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:40 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/17 17:28:06 by seramaro         ###   ########.fr       */
+/*   Updated: 2026/02/17 17:43:18 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
+# include <limits.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
@@ -32,6 +33,7 @@ t_list				*lst_pop_back(t_list **lst);
 t_list				*lst_pop_front(t_list **lst);
 void				push(t_list **stack_pop, t_list **stack_push);
 void				rotate(t_list **stack);
+int					parse(int ac, char **av, t_list **a);
 void				reverse_rotate(t_list **stack);
 void				swap(t_list *stack);
 void				pa(t_list **a, t_list **b);
