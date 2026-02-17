@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   input_parse.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
+/*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 17:36:54 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/17 18:46:21 by seramaro         ###   ########.fr       */
+/*   Updated: 2026/02/18 01:09:55 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ static int	is_integer(char *str)
 	size_t	i;
 
 	i = 0;
+	if (!str || str[0] == '\0')
+		return (0);
 	if (str[i] == '-' || str[i] == '+')
 		i++;
 	while (str[i] != '\0')
