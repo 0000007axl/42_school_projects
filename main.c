@@ -6,7 +6,7 @@
 /*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:27 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/17 15:43:05 by seramaro         ###   ########.fr       */
+/*   Updated: 2026/02/17 17:11:09 by seramaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,9 @@ long	ft_atoi(const char *str)
 	return (res * sign);
 }
 
-int		parse (int ac, char **av, t_list **a)
+int	parse(int ac, char **av, t_list **a)
 {
-	int		i;
+	int	i;
 
 	i = 1;
 	while (i < ac)
@@ -59,7 +59,6 @@ int		parse (int ac, char **av, t_list **a)
 	}
 	return (1);
 }
-
 
 int	main(int ac, char **av)
 {
@@ -71,10 +70,10 @@ int	main(int ac, char **av)
 	if (ac < 2)
 		return (0);
 	parse(ac, av, &a);
-	print (a);
-	print (b);
-	simple_sort(&a, &b);
-	print (a);
-	print (b);
+	//	print (a);
+	//	print (b);
+	index_lst(a);
+	// print (a);
+	// print (b);
 	return (0);
 }

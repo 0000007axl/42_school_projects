@@ -6,7 +6,7 @@
 #    By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/08 15:03:48 by trakotos          #+#    #+#              #
-#    Updated: 2026/02/17 15:43:28 by seramaro         ###   ########.fr        #
+#    Updated: 2026/02/17 16:57:19 by seramaro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,8 @@ SOURCES = \
 		r_rotate_func.c\
 		push_func.c\
 		swap_func.c\
-		simple_sort.c
+		simple_sort.c\
+		utils.c
 
 HEADERS = push_swap.h
 CC = cc
