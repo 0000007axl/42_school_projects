@@ -6,7 +6,7 @@
 /*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 15:56:55 by seramaro          #+#    #+#             */
-/*   Updated: 2026/02/17 17:11:17 by seramaro         ###   ########.fr       */
+/*   Updated: 2026/02/17 17:27:59 by seramaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,4 +80,19 @@ void	index_lst(t_list *a)
 		i++;
 	}
 	free(arr);
+}
+int	ft_sqrt(int num)
+{
+	int	sq;
+
+	if (num == 1 || num == 2)
+		return (1);
+	sq = 2;
+	while (sq < num)
+	{
+		if ((num / sq <= sq) && (num % sq <= sq))
+			return (sq);
+		sq++;
+	}
+	return (1);
 }

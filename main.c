@@ -6,7 +6,7 @@
 /*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:27 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/17 17:11:09 by seramaro         ###   ########.fr       */
+/*   Updated: 2026/02/17 17:28:02 by seramaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ int	main(int ac, char **av)
 	parse(ac, av, &a);
 	//	print (a);
 	//	print (b);
-	index_lst(a);
+	printf("%d\n", ft_sqrt(lst_size(a)));
 	// print (a);
 	// print (b);
 	return (0);

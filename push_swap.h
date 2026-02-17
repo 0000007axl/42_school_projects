@@ -6,7 +6,7 @@
 /*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:40 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/17 16:54:25 by seramaro         ###   ########.fr       */
+/*   Updated: 2026/02/17 17:28:06 by seramaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,6 @@ void				rrr(t_list **a, t_list **b);
 int					lst_size(t_list *lst);
 void				simple_sort(t_list **a, t_list **b);
 void				index_lst(t_list *a);
+int					ft_sqrt(int num);
+
 #endif
