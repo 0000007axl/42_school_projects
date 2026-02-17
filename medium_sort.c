@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   medium_sort.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
+/*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 18:15:20 by seramaro          #+#    #+#             */
-/*   Updated: 2026/02/17 18:59:07 by seramaro         ###   ########.fr       */
+/*   Updated: 2026/02/17 22:05:21 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ static int	get_max(t_list *lst)
 	}
 	return (max_index);
 }
+
 static void	push_max_index_to_a(t_list **a, t_list **b)
 {
 	int		b_size;
@@ -50,6 +51,7 @@ static void	push_max_index_to_a(t_list **a, t_list **b)
 			rrb(b);
 	pa(a, b);
 }
+
 void	medium_sort(t_list **a, t_list **b)
 {
 	int	block_size;

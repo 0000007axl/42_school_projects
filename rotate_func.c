@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotate_func.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
+/*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 16:55:12 by seramaro          #+#    #+#             */
-/*   Updated: 2026/02/16 17:00:00 by seramaro         ###   ########.fr       */
+/*   Updated: 2026/02/17 22:06:09 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	rb(t_list **b)
 	rotate(b);
 	write(1, "rb\n", 3);
 }
+
 void	rr(t_list **a, t_list **b)
 {
 	rotate(a);

@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   simple_sort.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
+/*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 15:15:51 by seramaro          #+#    #+#             */
-/*   Updated: 2026/02/17 15:44:41 by seramaro         ###   ########.fr       */
+/*   Updated: 2026/02/17 22:04:38 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int		get_min(t_list *lst)
+static int	get_min(t_list *lst)
 {
-	int		min_value;
+	int	min_value;
 
 	min_value = __INT_MAX__;
 	while (lst)
@@ -28,11 +28,11 @@ static int		get_min(t_list *lst)
 
 static void	push_min_to_b(t_list **a, t_list **b)
 {
-	int a_size;
-	int	min_index;
-	int min;
+	int		a_size;
+	int		min_index;
+	int		min;
 	t_list	*iter;
-	
+
 	a_size = lst_size(*a);
 	min_index = 0;
 	min = get_min(*a);
@@ -44,18 +44,18 @@ static void	push_min_to_b(t_list **a, t_list **b)
 	}
 	a_size = lst_size(*a);
 	if (min_index < (a_size / 2))
-		while((*a)->value != min)
+		while ((*a)->value != min)
 			ra(a);
 	else
-		while((*a)->value != min)
+		while ((*a)->value != min)
 			rra(a);
 	pb(a, b);
 }
 
 void	simple_sort(t_list **a, t_list **b)
 {
-	while(*a != NULL)
+	while (*a != NULL)
 		push_min_to_b(a, b);
-	while(*b != NULL)
+	while (*b != NULL)
 		pa(a, b);
 }
