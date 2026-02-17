@@ -6,7 +6,7 @@
 /*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:27 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/18 00:09:30 by seramaro         ###   ########.fr       */
+/*   Updated: 2026/02/18 00:40:10 by seramaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,7 @@ int	main(int ac, char **av)
 	medium_sort(&a, &b);
 	print(a);
 	print(b);
+	lst_clear(&a);
+	lst_clear(&b);
 	return (0);
 }
