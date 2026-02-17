@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   swap_func.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
+/*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 16:50:01 by seramaro          #+#    #+#             */
-/*   Updated: 2026/02/16 16:53:31 by seramaro         ###   ########.fr       */
+/*   Updated: 2026/02/17 22:07:16 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	swap(t_list *stack)
 	stack->value = stack->next->value;
 	stack->next->value = tmp;
 }
+
 void	sa(t_list *a)
 {
 	swap(a);

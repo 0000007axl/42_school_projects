@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_func.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
+/*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 16:36:20 by seramaro          #+#    #+#             */
-/*   Updated: 2026/02/16 16:49:26 by seramaro         ###   ########.fr       */
+/*   Updated: 2026/02/17 22:07:42 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
