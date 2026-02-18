@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:27 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/18 11:36:10 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/18 12:25:03 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,9 @@ int	main(int ac, char **av)
 	t_list		*b;
 	t_ops_count	*ops_count;
 	int			alg_choice;
+	int			is_bench;
 
+	is_bench = 0;
 	alg_choice = 0;
 	a = NULL;
 	b = NULL;
@@ -39,7 +41,7 @@ int	main(int ac, char **av)
 	ops_count = new_count_ops();
 	if (ops_count == NULL)
 		return (1);
-	if (!parse(ac, av, &a))
+	if (!parse(ac, av, &a, &alg_choice, &is_bench))
 	{
 		write(2, "Error\n", 6);
 		return (1);
