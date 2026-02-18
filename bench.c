@@ -1,24 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   bench.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/08 15:13:22 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/18 09:48:08 by trakotos         ###   ########.fr       */
+/*   Created: 2026/02/18 09:33:39 by trakotos          #+#    #+#             */
+/*   Updated: 2026/02/18 09:37:34 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	push_swap(t_list **a, t_list **b, t_ops_count *ops_count,
-		int alg_choice)
+t_ops_count	*new_count_ops(void)
 {
-	if (alg_choice == 1)
-		simple_sort(a, b);
-	else if (alg_choice == 2)
-		medium_sort(a, b);
-	else if (alg_choice == 3)
-		complex_sort(a, b);
+	t_ops_count	*ops_count;
+
+	ops_count = (t_ops_count *)malloc(sizeof(t_ops_count));
+	if (ops_count == NULL)
+		return (NULL);
+	ops_count->pa = 0;
+	ops_count->pb = 0;
+	ops_count->ra = 0;
+	ops_count->rra = 0;
+	ops_count->rb = 0;
+	ops_count->rrb = 0;
+	ops_count->rr = 0;
+	ops_count->rrr = 0;
+	ops_count->sa = 0;
+	ops_count->sb = 0;
+	ops_count->ss = 0;
+	ops_count->total_ops = 0;
 }

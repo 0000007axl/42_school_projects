@@ -6,7 +6,7 @@
 /*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:27 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/18 00:53:55 by seramaro         ###   ########.fr       */
+/*   Updated: 2026/02/18 09:52:21 by seramaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,24 +26,31 @@ void	print(t_list *lst)
 
 int	main(int ac, char **av)
 {
-	t_list	*a;
-	t_list	*b;
+	t_list		*a;
+	t_list		*b;
+	t_ops_count	*ops_count;
+	int			alg_choice;
 
+	alg_choice = 0;
 	a = NULL;
 	b = NULL;
 	if (ac < 2)
 		return (0);
+	ops_count = new_count_ops();
+	if (ops_count == NULL)
+		return (1);
 	if (!parse(ac, av, &a))
 	{
 		write(2, "Error\n", 6);
 		return (1);
 	}
-	printf("%.2f%%\n", compute_disorder(a) * 100);
-	print(a);
-	print(b);
-	adaptive_sort(&a, &b);
-	print(a);
-	print(b);
+	// printf("%.2f%%\n", compute_disorder(a) * 100);
+	// print(a);
+	// print(b);
+	write(2, "hello", 5);
+	medium_sort(&a, &b);
+	// print(a);
+	// print(b);
 	lst_clear(&a);
 	lst_clear(&b);
 	return (0);

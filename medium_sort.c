@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   medium_sort.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
+/*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 22:21:16 by seramaro          #+#    #+#             */
-/*   Updated: 2026/02/18 00:27:27 by seramaro         ###   ########.fr       */
+/*   Updated: 2026/02/18 08:59:46 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,5 +79,4 @@ void	medium_sort(t_list **a, t_list **b)
 	}
 	while (*b != NULL)
 		push_max_index_to_a(a, b);
-	printf("block_size = %d\n", block_size);
 }
