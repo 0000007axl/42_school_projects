@@ -6,7 +6,7 @@
 /*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:40 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/18 09:52:31 by seramaro         ###   ########.fr       */
+/*   Updated: 2026/02/18 11:01:19 by seramaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,8 @@ void				index_lst(t_list *a);
 
 void				push(t_list **stack_pop, t_list **stack_push);
 void				rotate(t_list **stack);
-int					parse(int ac, char **av, t_list **a);
+int					parse(int ac, char **av, t_list **a, int *alg_choice,
+						int *is_bench);
 void				reverse_rotate(t_list **stack);
 void				swap(t_list *stack);
 
@@ -72,6 +73,9 @@ int					ft_sqrt(int num);
 float				compute_disorder(t_list *l);
 int					get_max_index(t_list *lst);
 t_ops_count			*new_count_ops(void);
+
+void				apply_flags(char *str, int *alg_choice, int *is_bench);
+int					is_flag(char *str);
 
 void				simple_sort(t_list **a, t_list **b);
 void				medium_sort(t_list **a, t_list **b);

@@ -6,7 +6,7 @@
 /*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:27 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/18 09:52:21 by seramaro         ###   ########.fr       */
+/*   Updated: 2026/02/18 10:59:12 by seramaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,9 @@ int	main(int ac, char **av)
 	t_list		*b;
 	t_ops_count	*ops_count;
 	int			alg_choice;
+	int			is_bench;
 
+	is_bench = 0;
 	alg_choice = 0;
 	a = NULL;
 	b = NULL;
@@ -39,18 +41,17 @@ int	main(int ac, char **av)
 	ops_count = new_count_ops();
 	if (ops_count == NULL)
 		return (1);
-	if (!parse(ac, av, &a))
+	if (!parse(ac, av, &a, &alg_choice, &is_bench))
 	{
 		write(2, "Error\n", 6);
 		return (1);
 	}
 	// printf("%.2f%%\n", compute_disorder(a) * 100);
-	// print(a);
-	// print(b);
-	write(2, "hello", 5);
-	medium_sort(&a, &b);
-	// print(a);
-	// print(b);
+	print(a);
+	print(b);
+	push_swap(&a, &b, ops_count, alg_choice, is_bench);
+	print(a);
+	print(b);
 	lst_clear(&a);
 	lst_clear(&b);
 	return (0);

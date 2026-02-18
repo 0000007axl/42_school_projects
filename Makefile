@@ -6,7 +6,7 @@
 #    By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/08 15:03:48 by trakotos          #+#    #+#              #
-#    Updated: 2026/02/18 00:53:19 by seramaro         ###   ########.fr        #
+#    Updated: 2026/02/18 10:53:54 by seramaro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,8 @@ SOURCES = \
 		input_parse.c\
 		medium_sort.c\
 		complex_sort.c\
-		adaptive_sort.c
+		adaptive_sort.c\
+		bench.c
 
 HEADERS = push_swap.h
 CC = cc
