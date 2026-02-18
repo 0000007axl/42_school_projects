@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
+/*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:13:22 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/18 11:01:15 by seramaro         ###   ########.fr       */
+/*   Updated: 2026/02/18 11:14:40 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,9 @@ void	push_swap(t_list **a, t_list **b, t_ops_count *ops_count,
 		int alg_choice)
 {
 	if (alg_choice == 1)
-		simple_sort(a, b);
+		simple_sort(a, b, ops_count);
 	else if (alg_choice == 2)
-		medium_sort(a, b);
+		medium_sort(a, b, ops_count);
 	else if (alg_choice == 3)
-		complex_sort(a, b);
-	else
-		adaptive_sort(a, b);
+		complex_sort(a, b, ops_count);
 }

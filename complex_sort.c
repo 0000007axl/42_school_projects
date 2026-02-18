@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   complex_sort.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
+/*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 23:29:15 by seramaro          #+#    #+#             */
-/*   Updated: 2026/02/17 23:52:53 by seramaro         ###   ########.fr       */
+/*   Updated: 2026/02/18 11:18:31 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ static int	count_bits(int n)
 	}
 	return (count);
 }
-void	complex_sort(t_list **a, t_list **b)
+
+void	complex_sort(t_list **a, t_list **b, t_ops_count *ops_count)
 {
 	int	bit_count;
 	int	i;
@@ -43,13 +44,13 @@ void	complex_sort(t_list **a, t_list **b)
 		while (j < size)
 		{
 			if (((*a)->index >> i) & 1)
-				ra(a);
+				ra(a, ops_count);
 			else
-				pb(a, b);
+				pb(a, b, ops_count);
 			j++;
 		}
 		while (*b != NULL)
-			pa(a, b);
+			pa(a, b, ops_count);
 		i++;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 15:15:51 by seramaro          #+#    #+#             */
-/*   Updated: 2026/02/17 22:04:38 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/18 11:16:41 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static int	get_min(t_list *lst)
 	return (min_value);
 }
 
-static void	push_min_to_b(t_list **a, t_list **b)
+static void	push_min_to_b(t_list **a, t_list **b, t_ops_count *ops_count)
 {
 	int		a_size;
 	int		min_index;
@@ -45,17 +45,17 @@ static void	push_min_to_b(t_list **a, t_list **b)
 	a_size = lst_size(*a);
 	if (min_index < (a_size / 2))
 		while ((*a)->value != min)
-			ra(a);
+			ra(a, ops_count);
 	else
 		while ((*a)->value != min)
-			rra(a);
-	pb(a, b);
+			rra(a, ops_count);
+	pb(a, b, ops_count);
 }
 
-void	simple_sort(t_list **a, t_list **b)
+void	simple_sort(t_list **a, t_list **b, t_ops_count *ops_count)
 {
 	while (*a != NULL)
-		push_min_to_b(a, b);
+		push_min_to_b(a, b, ops_count);
 	while (*b != NULL)
-		pa(a, b);
+		pa(a, b, ops_count);
 }

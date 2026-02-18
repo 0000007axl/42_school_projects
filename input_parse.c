@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   input_parse.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seramaro <seramaro@student.42antananari    +#+  +:+       +#+        */
+/*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 17:36:54 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/18 10:20:26 by seramaro         ###   ########.fr       */
+/*   Updated: 2026/02/18 01:09:55 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ static int	is_duplicate(t_list *a, int n)
 	return (0);
 }
 
-int	parse(int ac, char **av, t_list **a, int *alg_choice, int *is_bench)
+int	parse(int ac, char **av, t_list **a)
 {
 	int		i;
 	long	n;
@@ -81,10 +81,6 @@ int	parse(int ac, char **av, t_list **a, int *alg_choice, int *is_bench)
 				return (0);
 			}
 			lst_push_back(a, lst_new((int)n));
-		}
-		else if (is_flag(av[i]))
-		{
-			apply_flags(av[i], alg_choice, is_bench);
 		}
 		else
 		{
