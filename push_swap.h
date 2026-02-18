@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:40 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/18 11:15:24 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/18 11:34:03 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,8 @@ t_ops_count			*new_count_ops(void);
 void				simple_sort(t_list **a, t_list **b, t_ops_count *ops_count);
 void				medium_sort(t_list **a, t_list **b, t_ops_count *ops_count);
 void				complex_sort(t_list **a, t_list **b,
+						t_ops_count *ops_count);
+void				adaptive_sort(t_list **a, t_list **b,
 						t_ops_count *ops_count);
 
 void				push_swap(t_list **a, t_list **b, t_ops_count *ops_count,

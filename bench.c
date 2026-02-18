@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 09:33:39 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/18 09:37:34 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/18 11:35:31 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,5 @@ t_ops_count	*new_count_ops(void)
 	ops_count->sb = 0;
 	ops_count->ss = 0;
 	ops_count->total_ops = 0;
+	return (ops_count);
 }

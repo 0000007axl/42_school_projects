@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:27 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/18 11:24:21 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/18 11:36:10 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ int	main(int ac, char **av)
 	// printf("%.2f%%\n", compute_disorder(a) * 100);
 	print(a);
 	print(b);
-	write(2, "hello", 5);
 	push_swap(&a, &b, ops_count, alg_choice);
 	print(a);
 	print(b);
