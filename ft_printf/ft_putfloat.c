@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 14:14:38 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/19 10:29:59 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/19 15:41:37 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,7 @@ int	ft_putfloat(double num)
 	c += ft_putchar('.');
 	dec = ((long)(num * 100)) % 100;
 	c += ft_putnbr(dec);
+	if (dec == 0)
+		c += ft_putnbr(0);
 	return (c);
 }

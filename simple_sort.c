@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 15:15:51 by seramaro          #+#    #+#             */
-/*   Updated: 2026/02/18 11:16:41 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/19 14:59:03 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static int	get_min(t_list *lst)
 	return (min_value);
 }
 
-static void	push_min_to_b(t_list **a, t_list **b, t_ops_count *ops_count)
+void	push_min_to_b(t_list **a, t_list **b, t_ops_count *ops_count)
 {
 	int		a_size;
 	int		min_index;
