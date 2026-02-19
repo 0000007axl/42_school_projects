@@ -6,13 +6,14 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:40 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/18 12:58:10 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/19 10:38:20 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
+# include "./ft_printf/ft_printf.h"
 # include <limits.h>
 # include <stdio.h>
 # include <stdlib.h>
@@ -85,5 +86,7 @@ void				adaptive_sort(t_list **a, t_list **b,
 
 void				push_swap(t_list **a, t_list **b, t_ops_count *ops_count,
 						int alg_choice);
+
+void				print_bench(t_ops_count *o, float disorder, int alg_choice);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:27 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/18 12:25:03 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/19 10:54:28 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int	main(int ac, char **av)
 	t_ops_count	*ops_count;
 	int			alg_choice;
 	int			is_bench;
+	float		disorder;
 
 	is_bench = 0;
 	alg_choice = 0;
@@ -46,13 +47,10 @@ int	main(int ac, char **av)
 		write(2, "Error\n", 6);
 		return (1);
 	}
-	// printf("%.2f%%\n", compute_disorder(a) * 100);
-	print(a);
-	print(b);
+	disorder = compute_disorder(a);
 	push_swap(&a, &b, ops_count, alg_choice);
-	print(a);
-	print(b);
-	printf("total ops : %d\n", ops_count->total_ops);
+	if (is_bench)
+		print_bench(ops_count, disorder, alg_choice);
 	lst_clear(&a);
 	lst_clear(&b);
 	return (0);

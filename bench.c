@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 09:33:39 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/18 12:55:55 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/19 10:56:09 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,8 @@ static int	ft_strcmp(const char *s1, const char *s2)
 int	is_flag(char *str)
 {
 	if (!ft_strcmp(str, "--bench") || !ft_strcmp(str, "--simple")
-		|| !ft_strcmp(str, "--medium") || !ft_strcmp(str, "--complex"))
+		|| !ft_strcmp(str, "--medium") || !ft_strcmp(str, "--complex")
+		|| !ft_strcmp(str, "--adaptive"))
 		return (1);
 	return (0);
 }
@@ -52,7 +53,7 @@ void	apply_flags(char *str, int *alg_choice, int *is_bench)
 
 t_ops_count	*new_count_ops(void)
 {
-	t_ops_count *ops_count;
+	t_ops_count	*ops_count;
 
 	ops_count = (t_ops_count *)malloc(sizeof(t_ops_count));
 	if (ops_count == NULL)
@@ -70,4 +71,31 @@ t_ops_count	*new_count_ops(void)
 	ops_count->ss = 0;
 	ops_count->total_ops = 0;
 	return (ops_count);
+}
+
+void	print_bench(t_ops_count *o, float disorder, int alg_choice)
+{
+	ft_printf("[bench] disorder: %f%%\n", disorder * 100);
+	ft_printf("[bench] strategy: ");
+	if (alg_choice == 1)
+		ft_printf("Simple / O(n²)\n");
+	else if (alg_choice == 2)
+		ft_printf("Medium / O(n√n)\n");
+	else if (alg_choice == 3)
+		ft_printf("Complex / O(n log(n))\n");
+	else
+	{
+		ft_printf("Adaptive ");
+		if (disorder < 0.2)
+			ft_printf("/ O(n²)\n");
+		else if ((disorder >= 0.2) && (disorder < 0.5))
+			ft_printf("/ O(n√n)\n");
+		else
+			ft_printf("/ O(n log(n))\n");
+	}
+	ft_printf("[bench] total_ops: %d\n", o->total_ops);
+	ft_printf("[bench] sa:\t%d\tsb:\t%d\tss:\t%d\tpa:\t%d\tpb:\t%d\n", o->sa,
+		o->sb, o->ss, o->pa, o->pb);
+	ft_printf("[bench] ra:\t%d\trb:\t%d\trr:\t%d\trra:\t%d\trrb:\t%d\trrr:\t%d\n",
+		o->ra, o->rb, o->rr, o->rra, o->rrb, o->rrr);
 }
