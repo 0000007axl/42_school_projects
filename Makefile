@@ -6,7 +6,7 @@
 #    By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/08 15:03:48 by trakotos          #+#    #+#              #
-#    Updated: 2026/02/19 10:50:50 by trakotos         ###   ########.fr        #
+#    Updated: 2026/02/19 14:56:46 by trakotos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,11 +31,21 @@ SOURCES = \
 HEADERS = push_swap.h
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
+OBJECTS=$(SOURCES:.c=.o)
+RM = rm -f
 
 all: $(NAME)
 
-$(NAME): $(HEADERS)
+$(NAME): $(OBJECTS)
 	make -C ft_printf
-	$(CC) $(CFLAGS) $(SOURCES) ./ft_printf/libftprintf.a -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJECTS) ./ft_printf/libftprintf.a -o $(NAME)
+
+clean:
+	$(RM) $(OBJECTS)
+
+fclean: clean
+	$(RM) $(NAME)
+
+re: fclean all
 
 .PHONY: $(NAME) all

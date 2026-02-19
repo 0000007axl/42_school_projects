@@ -6,17 +6,57 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 00:43:16 by seramaro          #+#    #+#             */
-/*   Updated: 2026/02/18 11:34:23 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/19 14:53:13 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+static void	sort_3_element(t_list **a, t_list **b, t_ops_count *ops_count)
+{
+	int	max_index;
+
+	max_index = get_max_index(*a);
+	if ((*a)->index == max_index)
+		ra(a, ops_count);
+	else if ((*a)->next->index == max_index)
+		rra(a, ops_count);
+	if ((*a)->index > (*a)->next->index)
+		sa(*a, ops_count);
+}
+
+static void	sort_5_element(t_list **a, t_list **b, t_ops_count *ops_count,
+		int size)
+{
+	if (size == 5)
+	{
+		push_min_to_b(a, b, ops_count);
+		push_min_to_b(a, b, ops_count);
+		sort_3_element(a, b, ops_count);
+		pa(a, b, ops_count);
+		pa(a, b, ops_count);
+	}
+	else if (size == 4)
+	{
+		push_min_to_b(a, b, ops_count);
+		sort_3_element(a, b, ops_count);
+		pa(a, b, ops_count);
+	}
+	else
+		sort_3_element(a, b, ops_count);
+}
+
 void	adaptive_sort(t_list **a, t_list **b, t_ops_count *ops_count)
 {
 	float	disorder;
+	int		size;
 
 	disorder = compute_disorder(*a);
+	size = lst_size(*a);
+	if (size <= 5)
+	{
+		sort_5_element(a, b, ops_count, size);
+	}
 	if (disorder <= 1e-6)
 		return ;
 	if (disorder < 0.2)
