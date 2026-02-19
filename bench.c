@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 09:33:39 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/19 10:56:09 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/19 12:50:21 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,13 +51,8 @@ void	apply_flags(char *str, int *alg_choice, int *is_bench)
 		*alg_choice = 3;
 }
 
-t_ops_count	*new_count_ops(void)
+void	new_count_ops(t_ops_count *ops_count)
 {
-	t_ops_count	*ops_count;
-
-	ops_count = (t_ops_count *)malloc(sizeof(t_ops_count));
-	if (ops_count == NULL)
-		return (NULL);
 	ops_count->pa = 0;
 	ops_count->pb = 0;
 	ops_count->ra = 0;
@@ -70,7 +65,6 @@ t_ops_count	*new_count_ops(void)
 	ops_count->sb = 0;
 	ops_count->ss = 0;
 	ops_count->total_ops = 0;
-	return (ops_count);
 }
 
 void	print_bench(t_ops_count *o, float disorder, int alg_choice)
@@ -96,6 +90,6 @@ void	print_bench(t_ops_count *o, float disorder, int alg_choice)
 	ft_printf("[bench] total_ops: %d\n", o->total_ops);
 	ft_printf("[bench] sa:\t%d\tsb:\t%d\tss:\t%d\tpa:\t%d\tpb:\t%d\n", o->sa,
 		o->sb, o->ss, o->pa, o->pb);
-	ft_printf("[bench] ra:\t%d\trb:\t%d\trr:\t%d\trra:\t%d\trrb:\t%d\trrr:\t%d\n",
-		o->ra, o->rb, o->rr, o->rra, o->rrb, o->rrr);
+	ft_printf("[bench] ra:\t%d\trb:\t%d\trr:\t%d\t", o->ra, o->rb, o->rr);
+	ft_printf("rra:\t%d\trrb:\t%d\trrr:\t%d\n", o->rra, o->rrb, o->rrr);
 }

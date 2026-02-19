@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 15:56:55 by seramaro          #+#    #+#             */
-/*   Updated: 2026/02/17 22:05:59 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/19 13:38:44 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int	*lst_to_arr(t_list *lst, int size)
 	int	*arr;
 	int	i;
 
+	if (size <= 0)
+		return (NULL);
 	arr = malloc(sizeof(int) * size);
 	if (!arr)
 		return (NULL);
@@ -106,6 +108,8 @@ float	compute_disorder(t_list *l)
 	int	j;
 	int	*tab;
 
+	if (l == NULL || l->next == NULL)
+		return (0.0);
 	mistakes = 0;
 	total_pairs = 0;
 	i = 0;
@@ -116,9 +120,8 @@ float	compute_disorder(t_list *l)
 		while (j < lst_size(l))
 		{
 			total_pairs++;
-			if (tab[i] > tab[j])
+			if (tab[i] > tab[j++])
 				mistakes++;
-			j++;
 		}
 		i++;
 	}

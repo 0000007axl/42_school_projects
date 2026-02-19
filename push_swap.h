@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:40 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/19 10:38:20 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/19 13:37:40 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ typedef struct s_ops_count
 }					t_ops_count;
 
 t_list				*lst_new(int value);
-void				lst_clear(t_list **lst);
+t_list				*lst_clear(t_list **lst);
 void				lst_push_back(t_list **lst, t_list *new);
 void				lst_push_front(t_list **lst, t_list *new);
 t_list				*lst_pop_back(t_list **lst);
@@ -53,8 +53,7 @@ void				index_lst(t_list *a);
 
 void				push(t_list **stack_pop, t_list **stack_push);
 void				rotate(t_list **stack);
-int					parse(int ac, char **av, t_list **a, int *alg_choice,
-						int *is_bench);
+t_list				*parse(int ac, char **av, int *alg_choice, int *is_bench);
 void				reverse_rotate(t_list **stack);
 void				swap(t_list *stack);
 void				apply_flags(char *str, int *alg_choice, int *is_bench);
@@ -75,7 +74,7 @@ void				rrr(t_list **a, t_list **b, t_ops_count *ops_count);
 int					ft_sqrt(int num);
 float				compute_disorder(t_list *l);
 int					get_max_index(t_list *lst);
-t_ops_count			*new_count_ops(void);
+void				new_count_ops(t_ops_count *count_ops);
 
 void				simple_sort(t_list **a, t_list **b, t_ops_count *ops_count);
 void				medium_sort(t_list **a, t_list **b, t_ops_count *ops_count);

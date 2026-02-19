@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 09:44:53 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/17 22:04:59 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/19 13:37:15 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ t_list	*lst_new(int value)
 	return (lst);
 }
 
-void	lst_clear(t_list **lst)
+t_list	*lst_clear(t_list **lst)
 {
 	t_list	*tmp;
 
 	if (lst == NULL)
-		return ;
+		return (NULL);
 	while (*lst != NULL)
 	{
 		tmp = *lst;
@@ -38,6 +38,7 @@ void	lst_clear(t_list **lst)
 		free(tmp);
 	}
 	*lst = NULL;
+	return (*lst);
 }
 
 int	lst_size(t_list *lst)

@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:13:22 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/18 13:14:26 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/19 12:42:27 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 void	push_swap(t_list **a, t_list **b, t_ops_count *ops_count,
 		int alg_choice)
 {
+	if (*a == NULL)
+		return ;
 	if (alg_choice == 1)
 		simple_sort(a, b, ops_count);
 	else if (alg_choice == 2)
