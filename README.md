@@ -1,13 +1,13 @@
 *This project has been created as part of the 42 curriculum by seramaro, trakotos.*
 
 
-## **<u>Description</u>**
+# **<u>Description</u>**
 
 This function sorts a stack of integers by using a second stack as temporary storage.
 First, it moves all the numbers from the original stack to the secondary stack, arranging them in descending order during the process. Then, it transfers the elements back to the original stack. Because of the reversed ordering in the second stack, the final result in the primary stack is sorted in ascending order.
 The algorithm applied during this process varies depending on the number of elements to sort, allowing the implementation to adapt its strategy for optimal efficiency across different input sizes.
 
-## **<u>Instructions</u>**
+# **<u>Instructions</u>**
 To use the program, go to the folder's directory in your terminal, and if it is the first time you use it, run the following command
 ```bash
  make
@@ -25,10 +25,10 @@ Every *[--flag]* section can be omitted (the program will then automatically cho
 
 Also, the user can use the ***[--bench]*** flag to display details such as the disorder percentage of the list as well as the number of operations that were made during the sorting process.
 
-## **<u>Ressources</u>**
+# **<u>Ressources</u>**
 
 The ressources used for this project were essentially videos from Youtube and Instagram teaching the fundamentals of sorting algorithms and the basics of bitwise operations (Bro Code is still a goated channel frfr).
-## **<u>Description of the used algorithms</u>**
+# **<u>Description of the used algorithms</u>**
 When executed, the program first automatically checks the disorder percentage of the list given by the user.
 Depending on this disorder percentage, the program will automatically choose the fastest sorting algorithm to use. Otherwise, if the user used flags any of the *--simple*, *--medium* or *--complex* flags, the program will use the algorithm associated to the flag independently of the disorder percentage.
 
@@ -38,5 +38,6 @@ Essentially, all the algorithm share a same pattern: rotate the elements order i
 elements from stack A to stack B 
 
 ### <u>First algorithm (--simple):</u>
+
 
 - This algorithm is the fastest when it comes to sorting shorter lists, ideally containing   
