@@ -6,7 +6,7 @@
 #    By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/08 15:03:48 by trakotos          #+#    #+#              #
-#    Updated: 2026/02/20 14:19:00 by trakotos         ###   ########.fr        #
+#    Updated: 2026/02/20 17:07:14 by trakotos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,20 +27,35 @@ SOURCES = \
 		complex_sort.c\
 		adaptive_sort.c\
 		bench.c \
-		lst_manager_2.c
+		lst_manager_2.c \
+		input_parse_2.c
+
+BONUS = checker
+BONUS_SOURCES = \
+	operations.c \
+	lst_manager_bonus.c \
+	input_parse_bonus.c \
+	execute_ops_bonus.c
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-OBJECTS=$(SOURCES:.c=.o)
+OBJECTS = $(SOURCES:.c=.o)
+BONUS_OBJECTS = $(BONUS_SOURCES:.c=.o)
 RM = rm -f
 PRINTF_DIR = ft_printf
 PRINTF_LIB = $(PRINTF_DIR)/libftprintf.a
+
 
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
 	make -C $(PRINTF_DIR)
 	$(CC) $(CFLAGS) $(OBJECTS) $(PRINTF_LIB) -o $(NAME)
+
+bonus: $(BONUS)
+
+$(BONUS): $(BONUS_OBJECTS)
+	$(CC) $(CFLAGS) $(BONUS_OBJECTS) -o $(BONUS)
 
 clean:
 	make -C $(PRINTF_DIR) clean
