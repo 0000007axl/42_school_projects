@@ -6,7 +6,7 @@
 #    By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/08 15:03:48 by trakotos          #+#    #+#              #
-#    Updated: 2026/02/19 14:56:46 by trakotos         ###   ########.fr        #
+#    Updated: 2026/02/20 13:15:16 by trakotos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,8 @@ SOURCES = \
 		medium_sort.c\
 		complex_sort.c\
 		adaptive_sort.c\
-		bench.c
+		bench.c \
+		lst_manager_2.c
 
 HEADERS = push_swap.h
 CC = cc

@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:40 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/19 15:44:47 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/20 13:17:27 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,12 @@ typedef struct s_ops_count
 	float			disorder;
 }					t_ops_count;
 
+typedef struct s_ops
+{
+	char			ops[5];
+	struct s_ops	*next;
+}					t_ops;
+
 t_list				*lst_new(int value);
 t_list				*lst_clear(t_list **lst);
 void				lst_push_back(t_list **lst, t_list *new);
@@ -51,6 +57,8 @@ t_list				*lst_pop_back(t_list **lst);
 t_list				*lst_pop_front(t_list **lst);
 int					lst_size(t_list *lst);
 void				index_lst(t_list *a);
+void				lst_add_ops_back(t_ops **lst, char *ops);
+void				print_ops(t_ops *ops);
 
 void				push(t_list **stack_pop, t_list **stack_push);
 void				rotate(t_list **stack);
@@ -60,31 +68,38 @@ void				swap(t_list *stack);
 void				apply_flags(char *str, int *alg_choice, int *is_bench);
 int					is_flag(char *str);
 void				push_min_to_b(t_list **a, t_list **b,
-						t_ops_count *ops_count);
+						t_ops_count *ops_count, t_ops **ops);
 
-void				pa(t_list **a, t_list **b, t_ops_count *ops_count);
-void				pb(t_list **a, t_list **b, t_ops_count *ops_count);
-void				sa(t_list *a, t_ops_count *ops_count);
-void				sb(t_list *b, t_ops_count *ops_count);
-void				ss(t_list *a, t_list *b, t_ops_count *ops_count);
-void				ra(t_list **a, t_ops_count *ops_count);
-void				rb(t_list **b, t_ops_count *ops_count);
-void				rr(t_list **a, t_list **b, t_ops_count *ops_count);
-void				rra(t_list **a, t_ops_count *ops_count);
-void				rrb(t_list **b, t_ops_count *ops_count);
-void				rrr(t_list **a, t_list **b, t_ops_count *ops_count);
+void				pa(t_list **a, t_list **b, t_ops_count *ops_count,
+						t_ops **ops);
+void				pb(t_list **a, t_list **b, t_ops_count *ops_count,
+						t_ops **ops);
+void				sa(t_list *a, t_ops_count *ops_count, t_ops **ops);
+void				sb(t_list *b, t_ops_count *ops_count, t_ops **ops);
+void				ss(t_list *a, t_list *b, t_ops_count *ops_count,
+						t_ops **ops);
+void				ra(t_list **a, t_ops_count *ops_count, t_ops **ops);
+void				rb(t_list **b, t_ops_count *ops_count, t_ops **ops);
+void				rr(t_list **a, t_list **b, t_ops_count *ops_count,
+						t_ops **ops);
+void				rra(t_list **a, t_ops_count *ops_count, t_ops **ops);
+void				rrb(t_list **b, t_ops_count *ops_count, t_ops **ops);
+void				rrr(t_list **a, t_list **b, t_ops_count *ops_count,
+						t_ops **ops);
 
 int					ft_sqrt(int num);
 float				compute_disorder(t_list *l);
 int					get_max_index(t_list *lst);
 void				new_count_ops(t_ops_count *count_ops);
 
-void				simple_sort(t_list **a, t_list **b, t_ops_count *ops_count);
-void				medium_sort(t_list **a, t_list **b, t_ops_count *ops_count);
-void				complex_sort(t_list **a, t_list **b,
-						t_ops_count *ops_count);
+void				simple_sort(t_list **a, t_list **b, t_ops_count *ops_count,
+						t_ops **ops);
+void				medium_sort(t_list **a, t_list **b, t_ops_count *ops_count,
+						t_ops **ops);
+void				complex_sort(t_list **a, t_list **b, t_ops_count *ops_count,
+						t_ops **ops);
 void				adaptive_sort(t_list **a, t_list **b,
-						t_ops_count *ops_count);
+						t_ops_count *ops_count, t_ops **ops);
 
 void				push_swap(t_list **a, t_list **b, t_ops_count *ops_count,
 						int alg_choice);

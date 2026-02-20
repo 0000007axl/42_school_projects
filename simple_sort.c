@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 15:15:51 by seramaro          #+#    #+#             */
-/*   Updated: 2026/02/19 14:59:03 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/20 13:09:04 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ static int	get_min(t_list *lst)
 	return (min_value);
 }
 
-void	push_min_to_b(t_list **a, t_list **b, t_ops_count *ops_count)
+void	push_min_to_b(t_list **a, t_list **b, t_ops_count *ops_count,
+		t_ops **ops)
 {
 	int		a_size;
 	int		min_index;
@@ -45,17 +46,17 @@ void	push_min_to_b(t_list **a, t_list **b, t_ops_count *ops_count)
 	a_size = lst_size(*a);
 	if (min_index < (a_size / 2))
 		while ((*a)->value != min)
-			ra(a, ops_count);
+			ra(a, ops_count, ops);
 	else
 		while ((*a)->value != min)
-			rra(a, ops_count);
-	pb(a, b, ops_count);
+			rra(a, ops_count, ops);
+	pb(a, b, ops_count, ops);
 }
 
-void	simple_sort(t_list **a, t_list **b, t_ops_count *ops_count)
+void	simple_sort(t_list **a, t_list **b, t_ops_count *ops_count, t_ops **ops)
 {
 	while (*a != NULL)
-		push_min_to_b(a, b, ops_count);
+		push_min_to_b(a, b, ops_count, ops);
 	while (*b != NULL)
-		pa(a, b, ops_count);
+		pa(a, b, ops_count, ops);
 }

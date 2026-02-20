@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 22:21:16 by seramaro          #+#    #+#             */
-/*   Updated: 2026/02/18 11:17:43 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/20 13:11:17 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ int	get_max_index(t_list *lst)
 	return (max_index);
 }
 
-static void	push_max_index_to_a(t_list **a, t_list **b, t_ops_count *ops_count)
+static void	push_max_index_to_a(t_list **a, t_list **b, t_ops_count *ops_count,
+		t_ops **ops)
 {
 	int		b_size;
 	int		max_index;
@@ -45,14 +46,14 @@ static void	push_max_index_to_a(t_list **a, t_list **b, t_ops_count *ops_count)
 	b_size = lst_size(*b);
 	if (max_index < (b_size / 2))
 		while ((*b)->index != max)
-			rb(b, ops_count);
+			rb(b, ops_count, ops);
 	else
 		while ((*b)->index != max)
-			rrb(b, ops_count);
-	pa(a, b, ops_count);
+			rrb(b, ops_count, ops);
+	pa(a, b, ops_count, ops);
 }
 
-void	medium_sort(t_list **a, t_list **b, t_ops_count *ops_count)
+void	medium_sort(t_list **a, t_list **b, t_ops_count *ops_count, t_ops **ops)
 {
 	int	block_size;
 	int	block_num;
@@ -71,12 +72,12 @@ void	medium_sort(t_list **a, t_list **b, t_ops_count *ops_count)
 		while (i++ < size_a)
 		{
 			if ((*a)->index < block_num)
-				pb(a, b, ops_count);
+				pb(a, b, ops_count, ops);
 			else
-				ra(a, ops_count);
+				ra(a, ops_count, ops);
 		}
 		block_num += block_size;
 	}
 	while (*b != NULL)
-		push_max_index_to_a(a, b, ops_count);
+		push_max_index_to_a(a, b, ops_count, ops);
 }

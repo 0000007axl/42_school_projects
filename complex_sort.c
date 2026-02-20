@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 23:29:15 by seramaro          #+#    #+#             */
-/*   Updated: 2026/02/18 11:18:31 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/20 13:10:02 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ static int	count_bits(int n)
 	return (count);
 }
 
-void	complex_sort(t_list **a, t_list **b, t_ops_count *ops_count)
+void	complex_sort(t_list **a, t_list **b, t_ops_count *ops_count,
+		t_ops **ops)
 {
 	int	bit_count;
 	int	i;
@@ -44,13 +45,13 @@ void	complex_sort(t_list **a, t_list **b, t_ops_count *ops_count)
 		while (j < size)
 		{
 			if (((*a)->index >> i) & 1)
-				ra(a, ops_count);
+				ra(a, ops_count, ops);
 			else
-				pb(a, b, ops_count);
+				pb(a, b, ops_count, ops);
 			j++;
 		}
 		while (*b != NULL)
-			pa(a, b, ops_count);
+			pa(a, b, ops_count, ops);
 		i++;
 	}
 }

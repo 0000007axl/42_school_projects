@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 16:50:01 by seramaro          #+#    #+#             */
-/*   Updated: 2026/02/18 11:22:20 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/20 13:02:31 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,27 +23,27 @@ void	swap(t_list *stack)
 	stack->next->value = tmp;
 }
 
-void	sa(t_list *a, t_ops_count *ops_count)
+void	sa(t_list *a, t_ops_count *ops_count, t_ops **ops)
 {
 	swap(a);
-	write(1, "sa\n", 3);
+	lst_add_ops_back(ops, "sa");
 	ops_count->sa++;
 	ops_count->total_ops++;
 }
 
-void	sb(t_list *b, t_ops_count *ops_count)
+void	sb(t_list *b, t_ops_count *ops_count, t_ops **ops)
 {
 	swap(b);
-	write(1, "sb\n", 3);
+	lst_add_ops_back(ops, "sb");
 	ops_count->sb++;
 	ops_count->total_ops++;
 }
 
-void	ss(t_list *a, t_list *b, t_ops_count *ops_count)
+void	ss(t_list *a, t_list *b, t_ops_count *ops_count, t_ops **ops)
 {
 	swap(a);
 	swap(b);
-	write(1, "ss\n", 3);
+	lst_add_ops_back(ops, "ss");
 	ops_count->ss++;
 	ops_count->total_ops++;
 }
