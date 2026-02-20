@@ -6,7 +6,7 @@
 #    By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/08 15:03:48 by trakotos          #+#    #+#              #
-#    Updated: 2026/02/20 17:07:14 by trakotos         ###   ########.fr        #
+#    Updated: 2026/02/20 17:08:06 by trakotos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,10 +60,13 @@ $(BONUS): $(BONUS_OBJECTS)
 clean:
 	make -C $(PRINTF_DIR) clean
 	$(RM) $(OBJECTS)
+	$(RM) $(BONUS_OBJECTS)
 
 fclean: clean
 	make -C $(PRINTF_DIR) fclean
 	$(RM) $(NAME)
+	$(RM) $(BONUS)
+
 
 re: fclean all
 
