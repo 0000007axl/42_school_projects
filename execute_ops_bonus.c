@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   execute_ops.c                                      :+:      :+:    :+:   */
+/*   execute_ops_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/20 15:21:25 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/20 16:57:35 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/20 17:17:27 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker.h"
 
 static int	ft_strcmp(const char *s1, const char *s2)
 {
@@ -58,7 +58,8 @@ int	execute_ops(char *ops, t_list **a, t_list **b)
 		reverse_rotate(b);
 	if (!ft_strcmp(ops, "rrr") || !ft_strcmp(ops, "rrr\n"))
 	{
-		reverse_rotate(*a);
-		reverse_rotate(*b);
+		reverse_rotate(a);
+		reverse_rotate(b);
 	}
+	return (1);
 }

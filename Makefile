@@ -6,7 +6,7 @@
 #    By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/08 15:03:48 by trakotos          #+#    #+#              #
-#    Updated: 2026/02/20 17:08:06 by trakotos         ###   ########.fr        #
+#    Updated: 2026/02/20 17:18:59 by trakotos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,10 +32,14 @@ SOURCES = \
 
 BONUS = checker
 BONUS_SOURCES = \
-	operations.c \
+	operations_bonus.c \
 	lst_manager_bonus.c \
 	input_parse_bonus.c \
-	execute_ops_bonus.c
+	execute_ops_bonus.c \
+	lst_utils_bonus.c \
+	main_bonus.c \
+	get_next_line.c \
+	get_next_line_utils.c
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
