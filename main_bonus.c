@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/20 15:15:59 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/20 17:03:35 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/20 17:24:11 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,6 @@ int	main(int ac, char **av)
 		write(1, "OK\n", 3);
 	else
 		write(1, "OK\n", 3);
+	lst_clear(&a);
 	return (0);
 }
