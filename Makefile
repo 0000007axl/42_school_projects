@@ -6,7 +6,7 @@
 #    By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/08 15:03:48 by trakotos          #+#    #+#              #
-#    Updated: 2026/02/20 13:15:16 by trakotos         ###   ########.fr        #
+#    Updated: 2026/02/20 14:19:00 by trakotos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,24 +29,27 @@ SOURCES = \
 		bench.c \
 		lst_manager_2.c
 
-HEADERS = push_swap.h
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 OBJECTS=$(SOURCES:.c=.o)
 RM = rm -f
+PRINTF_DIR = ft_printf
+PRINTF_LIB = $(PRINTF_DIR)/libftprintf.a
 
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
-	make -C ft_printf
-	$(CC) $(CFLAGS) $(OBJECTS) ./ft_printf/libftprintf.a -o $(NAME)
+	make -C $(PRINTF_DIR)
+	$(CC) $(CFLAGS) $(OBJECTS) $(PRINTF_LIB) -o $(NAME)
 
 clean:
+	make -C $(PRINTF_DIR) clean
 	$(RM) $(OBJECTS)
 
 fclean: clean
+	make -C $(PRINTF_DIR) fclean
 	$(RM) $(NAME)
 
 re: fclean all
 
-.PHONY: $(NAME) all
+.PHONY: all clean fclean re
