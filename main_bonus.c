@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/20 15:15:59 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/20 17:24:11 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/20 17:33:46 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,13 @@ int	main(int ac, char **av)
 	b = NULL;
 	a = parse(ac, av);
 	if (a == NULL)
-	{
-		write(2, "Error\n", 6);
-		return (1);
-	}
-	while ((op = get_next_line(0)) != NULL)
+		return (write(2, "Error\n", 6));
+	op = get_next_line(0);
+	while (op != NULL)
 	{
 		execute_ops(op, &a, &b);
 		free(op);
+		op = get_next_line(0);
 	}
 	if (is_shorted(a))
 		write(1, "OK\n", 3);
