@@ -21,7 +21,7 @@ Every *[--flag]* section can be omitted (the program will then automatically cho
 - ***[--medium]***: use the second sorting algorithm (medium).
 - ***[--complex]***: use the third sorting algorithm (complex).
 
-**Please not that only the last declared flag will be considered by the program*
+**Please note that only the last declared flag will be considered by the program*
 
 Also, the user can use the ***[--bench]*** flag to display details such as the disorder percentage of the list as well as the number of operations that were made during the sorting process.
 
@@ -40,4 +40,39 @@ elements from stack A to stack B
 ### <u>First algorithm (--simple):</u>
 
 
-- This algorithm is the fastest when it comes to sorting shorter lists, ideally containing   
+- This algorithm is the fastest when it comes to sorting shorter lists, ideally containing between 6 and 100 elements (it still works above that, but it becomes slower).
+- It repeatedly finds the smallest element in stack A, rotates stack A in the shortest way possible to put this smallest element on top, and then pushes it to stack B.
+- This process is repeated until stack A is empty.
+- Finally, it pushes every element back from stack B to stack A, resulting in a sorted stack in ascending order.
+
+### <u>Second algorithm (--medium):</u>
+
+- This algorithm is designed to be faster on medium sized lists (for example around 100 to 500 elements).
+- It first assigns an index (rank) to each number depending on its position in the sorted order.
+- The list is then split into "blocks" whose size is roughly the square root of the number of elements.
+- It pushes every element from stack A to stack B block by block: if the current element's index is inside the current block, it is pushed to stack B, otherwise stack A is rotated.
+- Once every element has been pushed to stack B, it then reconstructs stack A by always bringing the maximum indexed element of stack B to the top (using the shortest rotations) and pushing it back to stack A.
+- By repeatedly pushing back the maximum, stack A ends up sorted in ascending order.
+
+### <u>Third algorithm (--complex):</u>
+
+- This algorithm is the most efficient on large and highly disordered lists.
+- Just like the medium algorithm, it starts by indexing the list (transforming values into ranks from 0 to N - 1).
+- It then applies a binary radix sort on these indices.
+- For each bit position (from the least significant bit to the most significant bit), it goes through all the elements of stack A:
+	- If the current bit is 1, it rotates stack A.
+	- If the current bit is 0, it pushes the element to stack B.
+- After one full pass for a given bit, it pushes every element back from stack B to stack A.
+- Repeating this process for all necessary bits results in stack A being sorted in ascending order.
+
+### <u>Adaptive mode (no flag):</u>
+
+- By default, the program uses an adaptive mode that automatically chooses the best algorithm depending on the disorder percentage of the list.
+- If the list size is very small (5 elements or less), it uses a dedicated small sort:
+	- For 2 or 3 elements, it uses swaps and rotations to directly sort stack A.
+	- For 4 or 5 elements, it pushes the smallest element(s) to stack B, sorts the remaining 3 elements, and then pushes the elements back to stack A.
+- For bigger lists, it uses the disorder percentage to choose between the three algorithms:
+	- if the disorder percentage is low, it uses the simple method,
+	- if it is medium, it uses the medium method,
+	- otherwise, it uses the complex method.
+
