@@ -34,8 +34,8 @@ Depending on this disorder percentage, the program will automatically choose the
 
 Essentially, all the algorithm share a same pattern: rotate the elements order in the stack A so the smallest element is at the top, send this element to stack B, and then repeat this process until all the elements are sent to stack B and sorted in a decreasing order. From then on, it just sends each element back to stack A prints it out on the terminal, in an ascending order.
 
-**This is just a basic description of the shared pattern of all the algorithms . Every sorting method will be explained with more details below.* 
-elements from stack A to stack B 
+**This is just a basic description of the shared pattern of all the algorithms . Every sorting method will be explained with more details below.*
+elements from stack A to stack B
 
 ### <u>First algorithm (--simple):</u>
 
@@ -65,7 +65,7 @@ elements from stack A to stack B
 - After one full pass for a given bit, it pushes every element back from stack B to stack A.
 - Repeating this process for all necessary bits results in stack A being sorted in ascending order.
 
-### <u>Adaptive mode (no flag):</u>
+### <u>Adaptive mode (--adaptive or no-flag):</u>
 
 - By default, the program uses an adaptive mode that automatically chooses the best algorithm depending on the disorder percentage of the list.
 - If the list size is very small (5 elements or less), it uses a dedicated small sort:
