@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:40 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/20 13:17:27 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/21 09:25:43 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include "./ft_printf/ft_printf.h"
 # include <limits.h>
-# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 

@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operation_bonus.c                                  :+:      :+:    :+:   */
+/*   operations_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/20 14:37:28 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/20 14:40:56 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/21 09:37:05 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "checker_bonus.h"
 
 void	swap(t_list *stack)
 {

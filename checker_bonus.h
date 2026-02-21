@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.h                                          :+:      :+:    :+:   */
+/*   checker_bonus.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,10 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CHECKER_H
-# define CHECKER_H
+#ifndef CHECKER_BONUS_H
+# define CHECKER_BONUS_H
 
-# include "get_next_line.h"
+# include "get_next_line_bonus.h"
 # include "unistd.h"
 # include <limits.h>
 

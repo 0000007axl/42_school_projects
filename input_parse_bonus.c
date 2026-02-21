@@ -6,11 +6,11 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/20 15:08:25 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/20 17:12:32 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/21 09:37:05 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "checker_bonus.h"
 
 static int	is_integer(char *str)
 {

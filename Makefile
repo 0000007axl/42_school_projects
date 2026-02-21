@@ -6,7 +6,7 @@
 #    By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/08 15:03:48 by trakotos          #+#    #+#              #
-#    Updated: 2026/02/20 17:18:59 by trakotos         ###   ########.fr        #
+#    Updated: 2026/02/21 09:38:35 by trakotos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,8 +38,8 @@ BONUS_SOURCES = \
 	execute_ops_bonus.c \
 	lst_utils_bonus.c \
 	main_bonus.c \
-	get_next_line.c \
-	get_next_line_utils.c
+	get_next_line_bonus.c \
+	get_next_line_utils_bonus.c
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror

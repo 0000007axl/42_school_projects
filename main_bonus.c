@@ -6,11 +6,11 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/20 15:15:59 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/20 17:33:46 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/21 09:36:23 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "checker_bonus.h"
 
 static int	is_shorted(t_list *lst)
 {
@@ -35,7 +35,6 @@ int	main(int ac, char **av)
 
 	if (ac < 2)
 		return (0);
-	a = NULL;
 	b = NULL;
 	a = parse(ac, av);
 	if (a == NULL)

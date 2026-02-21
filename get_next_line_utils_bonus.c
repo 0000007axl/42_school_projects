@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 11:34:25 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/01 09:38:27 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/21 09:37:33 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -40,8 +40,8 @@ char	*ft_strjoin(char *s1, char *s2)
 
 	if (s1 == NULL && s2 == NULL)
 		return (NULL);
-	res = (char *)malloc(sizeof(char) * (ft_index_of(s1, '\0')
-				+ ft_index_of(s2, '\0') + 1));
+	res = (char *)malloc(sizeof(char) * (ft_index_of(s1, '\0') + ft_index_of(s2,
+					'\0') + 1));
 	if (res == NULL)
 		return (NULL);
 	i = 0;
