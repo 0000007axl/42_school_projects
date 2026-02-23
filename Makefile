@@ -6,7 +6,7 @@
 #    By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/08 15:03:48 by trakotos          #+#    #+#              #
-#    Updated: 2026/02/21 09:38:35 by trakotos         ###   ########.fr        #
+#    Updated: 2026/02/23 12:14:00 by trakotos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,4 +74,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
