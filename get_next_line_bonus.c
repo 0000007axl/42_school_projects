@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 11:34:10 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/21 09:37:33 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/24 14:09:43 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,13 +65,15 @@ char	*get_line(char **buffer)
 	return (line);
 }
 
-char	*get_next_line(int fd)
+char	*get_next_line(int fd, int is_free_stach)
 {
 	static char	*buffer;
 	char		*line;
 
 	line = NULL;
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	if (is_free_stach)
+		free(buffer);
+	if (fd < 0 || BUFFER_SIZE <= 0 || is_free_stach)
 		return (NULL);
 	buffer = get_buffer(fd, buffer);
 	if (ft_index_of(buffer, '\0') == 0)
