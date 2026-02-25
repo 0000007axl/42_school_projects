@@ -6,13 +6,13 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 17:00:23 by seramaro          #+#    #+#             */
-/*   Updated: 2026/02/20 13:01:06 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/25 09:29:51 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	reverse_rotate(t_list **stack)
+static void	reverse_rotate(t_list **stack)
 {
 	t_list	*tmp;
 

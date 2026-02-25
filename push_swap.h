@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:40 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/21 09:25:43 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/25 09:30:52 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,15 +59,13 @@ void				index_lst(t_list *a);
 void				lst_add_ops_back(t_ops **lst, char *ops);
 void				print_ops(t_ops *ops);
 
-void				push(t_list **stack_pop, t_list **stack_push);
-void				rotate(t_list **stack);
 t_list				*parse(int ac, char **av, int *alg_choice, int *is_bench);
-void				reverse_rotate(t_list **stack);
-void				swap(t_list *stack);
 void				apply_flags(char *str, int *alg_choice, int *is_bench);
 int					is_flag(char *str);
-void				push_min_to_b(t_list **a, t_list **b,
-						t_ops_count *ops_count, t_ops **ops);
+char				*ft_strjoin(int size, char **strs, char *sep);
+char				**ft_cleanup_2d(char **strs, int l);
+char				**ft_split(char *s, char c);
+int					ft_strlen(char *str);
 
 void				pa(t_list **a, t_list **b, t_ops_count *ops_count,
 						t_ops **ops);
@@ -86,6 +84,8 @@ void				rrb(t_list **b, t_ops_count *ops_count, t_ops **ops);
 void				rrr(t_list **a, t_list **b, t_ops_count *ops_count,
 						t_ops **ops);
 
+void				push_min_to_b(t_list **a, t_list **b,
+						t_ops_count *ops_count, t_ops **ops);
 int					ft_sqrt(int num);
 float				compute_disorder(t_list *l);
 int					get_max_index(t_list *lst);

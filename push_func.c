@@ -6,13 +6,13 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 16:36:20 by seramaro          #+#    #+#             */
-/*   Updated: 2026/02/20 12:59:21 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/25 09:29:29 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	push(t_list **stack_pop, t_list **stack_push)
+static void	push(t_list **stack_pop, t_list **stack_push)
 {
 	t_list	*tmp;
 

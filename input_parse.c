@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 17:36:54 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/19 13:34:59 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/25 09:27:02 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,28 +64,46 @@ static int	is_duplicate(t_list *a, int n)
 	return (0);
 }
 
+static char	**parse_av(char **strs, int size)
+{
+	char	*join;
+	char	**splited;
+
+	join = ft_strjoin(size, strs, " ");
+	if (join == NULL)
+		return (NULL);
+	splited = ft_split(join, ' ');
+	free(join);
+	if (splited == NULL)
+		return (NULL);
+	return (splited);
+}
+
 t_list	*parse(int ac, char **av, int *alg_choice, int *is_bench)
 {
 	int		i;
 	long	n;
 	t_list	*a;
+	char	**strs;
 
 	a = NULL;
-	i = 1;
-	while (i < ac)
+	i = 0;
+	strs = parse_av(av + 1, ac - 1);
+	while (strs[i] != NULL)
 	{
-		if (is_integer(av[i]))
+		if (is_integer(strs[i]))
 		{
-			n = ft_atoi(av[i]);
+			n = ft_atoi(strs[i]);
 			if ((n > INT_MAX || n < INT_MIN) || is_duplicate(a, (int)n))
 				return (lst_clear(&a));
 			lst_push_back(&a, lst_new((int)n));
 		}
-		else if (is_flag(av[i]))
-			apply_flags(av[i], alg_choice, is_bench);
+		else if (is_flag(strs[i]))
+			apply_flags(strs[i], alg_choice, is_bench);
 		else
 			return (lst_clear(&a));
 		i++;
 	}
+	ft_cleanup_2d(strs, i);
 	return (a);
 }

@@ -6,13 +6,13 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 16:50:01 by seramaro          #+#    #+#             */
-/*   Updated: 2026/02/20 13:02:31 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/25 09:29:35 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	swap(t_list *stack)
+static void	swap(t_list *stack)
 {
 	int	tmp;
 
