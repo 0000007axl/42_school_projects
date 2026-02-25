@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:40 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/25 09:50:53 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/25 10:06:36 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,12 @@ typedef struct s_ops_count
 	float			disorder;
 }					t_ops_count;
 
+typedef struct s_flags
+{
+	int				alg_choice;
+	int				is_bench;
+}					t_flags;
+
 typedef struct s_ops
 {
 	char			ops[5];
@@ -59,8 +65,8 @@ void				index_lst(t_list *a);
 void				lst_add_ops_back(t_ops **lst, char *ops);
 void				print_ops(t_ops *ops);
 
-t_list				*parse(int ac, char **av, int *alg_choice, int *is_bench);
-void				apply_flags(char *str, int *alg_choice, int *is_bench);
+t_list				*parse(int ac, char **av, t_flags *flags);
+void				apply_flags(char *str, t_flags *flags);
 int					is_flag(char *str);
 char				**ft_cleanup_2d(char **strs, int l);
 char				*ft_strjoin(int size, char **strs, char *sep);

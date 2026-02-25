@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/20 15:14:59 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/20 15:15:16 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/25 10:08:50 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,16 +37,16 @@ int	is_flag(char *str)
 	return (0);
 }
 
-void	apply_flags(char *str, int *alg_choice, int *is_bench)
+void	apply_flags(char *str, t_flags *flags)
 {
 	if (!ft_strcmp(str, "--bench"))
-		*is_bench = 1;
+		flags->is_bench = 1;
 	if (!ft_strcmp(str, "--adaptive"))
-		*alg_choice = 0;
+		flags->alg_choice = 0;
 	if (!ft_strcmp(str, "--simple"))
-		*alg_choice = 1;
+		flags->alg_choice = 1;
 	if (!ft_strcmp(str, "--medium"))
-		*alg_choice = 2;
+		flags->alg_choice = 2;
 	if (!ft_strcmp(str, "--complex"))
-		*alg_choice = 3;
+		flags->alg_choice = 3;
 }

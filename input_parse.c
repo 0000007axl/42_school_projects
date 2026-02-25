@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 17:36:54 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/25 09:45:58 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/25 10:06:47 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ static char	**parse_av(char **strs, int size)
 	return (splited);
 }
 
-t_list	*parse(int ac, char **av, int *alg_choice, int *is_bench)
+t_list	*parse(int ac, char **av, t_flags *flags)
 {
 	int		i;
 	long	n;
@@ -99,7 +99,7 @@ t_list	*parse(int ac, char **av, int *alg_choice, int *is_bench)
 			lst_push_back(&a, lst_new((int)n));
 		}
 		else if (is_flag(strs[i]))
-			apply_flags(strs[i], alg_choice, is_bench);
+			apply_flags(strs[i], flags);
 		else
 			return (lst_clear(&a));
 		i++;
