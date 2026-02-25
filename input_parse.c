@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 17:36:54 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/25 09:27:02 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/25 09:45:58 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ t_list	*parse(int ac, char **av, int *alg_choice, int *is_bench)
 	a = NULL;
 	i = 0;
 	strs = parse_av(av + 1, ac - 1);
-	while (strs[i] != NULL)
+	while (strs != NULL && strs[i] != NULL)
 	{
 		if (is_integer(strs[i]))
 		{
