@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/20 15:08:25 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/21 09:37:05 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/25 09:52:02 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,19 +64,36 @@ static int	is_duplicate(t_list *a, int n)
 	return (0);
 }
 
+static char	**parse_av(char **strs, int size)
+{
+	char	*join;
+	char	**splited;
+
+	join = ft_strjoin(size, strs, " ");
+	if (join == NULL)
+		return (NULL);
+	splited = ft_split(join, ' ');
+	free(join);
+	if (splited == NULL)
+		return (NULL);
+	return (splited);
+}
+
 t_list	*parse(int ac, char **av)
 {
 	int		i;
 	long	n;
 	t_list	*a;
+	char	**strs;
 
 	a = NULL;
-	i = 1;
-	while (i < ac)
+	i = 0;
+	strs = parse_av(av + 1, ac - 1);
+	while (strs != NULL && strs[i] != NULL)
 	{
-		if (is_integer(av[i]))
+		if (is_integer(strs[i]))
 		{
-			n = ft_atoi(av[i]);
+			n = ft_atoi(strs[i]);
 			if ((n > INT_MAX || n < INT_MIN) || is_duplicate(a, (int)n))
 				return (lst_clear(&a));
 			lst_push_back(&a, lst_new((int)n));
@@ -85,5 +102,6 @@ t_list	*parse(int ac, char **av)
 			return (lst_clear(&a));
 		i++;
 	}
+	ft_cleanup_2d(strs, i);
 	return (a);
 }

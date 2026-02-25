@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 11:34:10 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/24 14:09:43 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/25 09:54:54 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*get_buffer(int fd, char *buffer)
 		if (size > 0)
 		{
 			content[size] = '\0';
-			buffer = ft_strjoin(buffer, content);
+			buffer = ft_strjoin_2string(buffer, content);
 		}
 	}
 	free(content);
@@ -44,7 +44,7 @@ char	*get_line(char **buffer)
 	char	*line;
 	char	*tmp;
 
-	line = ft_substr(*buffer, 0, ft_index_of(*buffer, '\n') + 1);
+	line = ft_substr_(*buffer, 0, ft_index_of(*buffer, '\n') + 1);
 	if (line == NULL)
 		return (NULL);
 	if ((*buffer)[ft_index_of(*buffer, '\n')] == '\0')
@@ -53,7 +53,7 @@ char	*get_line(char **buffer)
 		*buffer = NULL;
 		return (line);
 	}
-	tmp = ft_substr(*buffer, ft_index_of(*buffer, '\n') + 1,
+	tmp = ft_substr_(*buffer, ft_index_of(*buffer, '\n') + 1,
 			ft_index_of((*buffer) + ft_index_of(*buffer, '\n') + 1, '\0'));
 	if (tmp == NULL)
 	{

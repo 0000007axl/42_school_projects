@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:40 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/25 09:46:48 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/25 09:50:53 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,8 +62,8 @@ void				print_ops(t_ops *ops);
 t_list				*parse(int ac, char **av, int *alg_choice, int *is_bench);
 void				apply_flags(char *str, int *alg_choice, int *is_bench);
 int					is_flag(char *str);
-char				*ft_strjoin(int size, char **strs, char *sep);
 char				**ft_cleanup_2d(char **strs, int l);
+char				*ft_strjoin(int size, char **strs, char *sep);
 char				**ft_split(char *s, char c);
 int					ft_strlen(char *str);
 

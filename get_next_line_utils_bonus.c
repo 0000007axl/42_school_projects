@@ -6,7 +6,7 @@
 /*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 11:34:25 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/21 09:37:33 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/02/25 09:54:45 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-char	*ft_strjoin(char *s1, char *s2)
+char	*ft_strjoin_2string(char *s1, char *s2)
 {
 	size_t	i;
 	size_t	j;
@@ -69,7 +69,7 @@ size_t	ft_index_of(const char *s, char c)
 	return (l);
 }
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr_(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;
 	size_t	i;
