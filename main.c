@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
+/*   By: trakotos <trakotos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:27 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/25 10:05:41 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/03/03 14:17:46 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	main(int ac, char **av)
 	if (a == NULL)
 		return (write(2, "Error\n", 6));
 	ops_count.disorder = compute_disorder(a);
-	push_swap(&a, &b, &ops_count, flags.alg_choice);
+	push_swap(&a, &b, &ops_count, flags);
 	if (flags.is_bench)
 		print_bench(&ops_count, ops_count.disorder, flags.alg_choice);
 	lst_clear(&a);

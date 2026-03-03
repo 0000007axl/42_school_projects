@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
+/*   By: trakotos <trakotos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:13:22 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/21 09:50:21 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/03/03 14:17:38 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,7 @@ static t_ops	*lst_clear_ops(t_ops **lst)
 	return (*lst);
 }
 
-void	push_swap(t_list **a, t_list **b, t_ops_count *ops_count,
-		int alg_choice)
+void	push_swap(t_list **a, t_list **b, t_ops_count *ops_count, t_flags flags)
 {
 	t_ops	*lst_ops;
 
@@ -39,13 +38,13 @@ void	push_swap(t_list **a, t_list **b, t_ops_count *ops_count,
 		return ;
 	if ((*a)->next == NULL)
 		return ;
-	if (alg_choice == 0 || lst_size(*a) <= 5)
+	if (flags.alg_choice == 0 || lst_size(*a) <= 5)
 		adaptive_sort(a, b, ops_count, &lst_ops);
-	else if (alg_choice == 1)
+	else if (flags.alg_choice == 1)
 		simple_sort(a, b, ops_count, &lst_ops);
-	else if (alg_choice == 2)
+	else if (flags.alg_choice == 2)
 		medium_sort(a, b, ops_count, &lst_ops);
-	else if (alg_choice == 3)
+	else if (flags.alg_choice == 3)
 		complex_sort(a, b, ops_count, &lst_ops);
 	print_ops(lst_ops);
 	lst_clear_ops(&lst_ops);

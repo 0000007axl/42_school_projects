@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: trakotos <trakotos@42antananarivo.mg>      +#+  +:+       +#+        */
+/*   By: trakotos <trakotos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:40 by trakotos          #+#    #+#             */
-/*   Updated: 2026/02/25 10:06:36 by trakotos         ###   ########.fr       */
+/*   Updated: 2026/03/03 14:18:02 by trakotos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,7 +107,7 @@ void				adaptive_sort(t_list **a, t_list **b,
 						t_ops_count *ops_count, t_ops **ops);
 
 void				push_swap(t_list **a, t_list **b, t_ops_count *ops_count,
-						int alg_choice);
+						t_flags flags);
 
 void				print_bench(t_ops_count *o, float disorder, int alg_choice);
 
